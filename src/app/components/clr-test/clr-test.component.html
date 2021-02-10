@@ -1,0 +1,33 @@
+<p>clr-test works!</p>
+<clr-tabs>
+    <clr-tab>
+      <button clrTabLink>Tab One</button>
+      <clr-tab-content *clrIfActive>
+        <div *ngIf=isshown>
+            {{ name }}
+        </div>
+        <button (click)="isshown = !isshown">
+            Toggle
+        </button>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <button clrTabLink>Tab Two</button>
+      <clr-tab-content *clrIfActive="true">
+        {{ nameTwo }}
+        <div>
+            <ul>
+                <li *ngFor="let number of test">
+                    {{ number }}
+                </li>
+            </ul>
+        </div>
+      </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+      <button clrTabLink>Tab Three</button>
+      <clr-tab-content *clrIfActive="true">
+        {{ nameThree }}
+      </clr-tab-content>
+    </clr-tab>
+  </clr-tabs>
