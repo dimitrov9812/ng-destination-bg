@@ -1,0 +1,22 @@
+// global styles and commonly used variable values
+
+// fonts
+
+// colors
+
+$aquamarine: #85FFE2;
+$cyber-yellow: #FFCF00;
+$corn-silk: #F5ECCD;
+
+
+
+
+// styles
+
+html {
+    background: linear-gradient(to right top, $aquamarine, $corn-silk);
+}
+
+html, body {
+    height: 100%;
+}
