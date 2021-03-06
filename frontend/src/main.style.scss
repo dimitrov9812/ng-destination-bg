@@ -2,21 +2,90 @@
 
 // fonts
 
-// colors
+// font-sizes
+$font-xxs: 0.9rem;
+$font-xs: 1.3rem;
+$font-s: 1.5rem;
+$font-xm: 2rem;
+$font-m: 3rem;
+$font-lm: 4rem;
+$font-l: 4.5rem;
+$font-xl: 5rem;
 
+// colors
 $aquamarine: #85FFE2;
 $cyber-yellow: #FFCF00;
 $corn-silk: #F5ECCD;
-
-
+$moss-green: #748E54;
+$border-light-grey: rgba(255, 255, 255, 0.5);
+$dark-orange: #ff8600;
+$opacity-dark-orange: #e7d5c18f;
+$darker-orange: #b66203;
+$light-orange: #ffd32c;
+$white: rgb(255, 247, 175);
+$opacity-white: rgba(255, 255, 255, 0.8);
+$barely-white: rgba(255, 255, 255, 0.3);
 
 
 // styles
 
 html {
-    background: linear-gradient(to right top, $aquamarine, $corn-silk);
+    background-image: url(../assets/images/login.jpg);
+    background: linear-gradient(45deg, $dark-orange, $light-orange);
 }
 
 html, body {
     height: 100%;
+    overflow: hidden;
+}
+
+.baloon-1 {
+    z-index: -1;
+    left: 100px;
+    top: 450px;
+    position: absolute;
+    height: 350px;
+    overflow: hidden;
+}
+.baloon-2 {
+    z-index: -1;
+    left: 450px;
+    top: -50px;
+    position: absolute;
+    height: 350px;
+}
+
+.baloon-3 {
+    z-index: -1;
+    right: 20px;
+    top: 100px;
+    position: absolute;
+    height: 450px;
+}
+
+// Flex
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,0 +1,139 @@
+@import '../../main.style.scss';
+.nav-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+.nav-profile-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.name-text {
+  font-size: $font-xm;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.family-name-text {
+  font-size: $font-s;
+  color: rgb(114, 112, 112);
+}
+
+.nav-menu-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 3;
+  align-self: center
+}
+.nav-menu-items {
+  margin-bottom: 50px;
+  align-self: center;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.nav-item-x-small-icon {
+  display: none;
+}
+
+.nav-menu-item {
+  width: 100%;
+  font-size: $font-s;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.nav-item-logoout {
+  font-size: $font-s;
+  cursor: pointer;
+}
+
+.nav-item-x-small-text {
+  display: none;
+}
+
+.nav-bottom {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+  .nav-menu-item {
+    font-size: $font-xs;
+    margin: 20px;
+  }
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  .name-text {
+    font-size: $font-s;
+  }
+  .family-name-text {
+    font-size: $font-xs;
+  }
+}
+
+@media (max-width: 850px) {
+  .nav-menu-item {
+    font-size: $font-xs;
+    margin: 20px;
+  }
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+  }
+  .name-text, .family-name-text{
+    display: none;
+  }
+
+  .nav-menu-item, .nav-item-logout {
+    display: none;
+  }
+
+  .nav-menu-items {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-item-x-small-icon {
+    display: block;
+    font-size: $font-s;
+    margin: 30px;
+    cursor: pointer;
+  }
+
+  .nav-bottom {
+    width: 50px;
+  }
+
+
+  .nav-item-x-small-text {
+    display: block;
+    font-size: $font-s;
+    margin: 30px;
+    cursor: pointer;
+  }
+}

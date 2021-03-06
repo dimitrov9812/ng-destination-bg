@@ -1,0 +1,44 @@
+<div class="nav-wrap">
+  <div class="nav-profile-wrap">
+    <div class="profile-image"
+         [routerLink]="['profile']"
+         style="background-image: url('https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');">
+    </div>
+    <span class="name-text">Alexander</span><br/>
+    <span class="family-name-text">Dimitrow</span>
+  </div>
+  <div class="nav-menu-wrap">
+    <ul class="nav-menu-items">
+      <li class="nav-menu-item"
+          [routerLink]="['home']"
+          routerLinkActive="active">дестинации</li>
+      <li class="nav-menu-item"
+          [routerLink]="['favourites']"
+          routerLinkActive="active">харесани</li>
+      <li class="nav-menu-item"
+          [routerLink]="['completed']"
+          routerLinkActive="active">изпълнени</li>
+      <li class="nav-menu-item"
+          [routerLink]="['checked']"
+          routerLinkActive="active">набелязани</li>
+      <li class="nav-item-x-small-icon"
+          [routerLink]="['home']"
+          routerLinkActive="active">Д</li>
+      <li class="nav-item-x-small-icon"
+          [routerLink]="['favourites']"
+          routerLinkActive="active">Х</li>
+      <li class="nav-item-x-small-icon"
+          [routerLink]="['completed']"
+          routerLinkActive="active">И</li>
+      <li class="nav-item-x-small-icon"
+          [routerLink]="['checked']"
+          routerLinkActive="active">Н</li>
+    </ul>
+  </div>
+  <div>
+  <div class="nav-bottom">
+    <span class="nav-item-logout">излизане</span>
+    <span class="nav-item-x-small-text">И</span>
+  </div>
+  </div>
+</div>

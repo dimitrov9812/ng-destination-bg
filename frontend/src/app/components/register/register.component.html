@@ -1,0 +1,60 @@
+<div class="login-card">
+  <div class="login-left-side centered">
+      <div class="login-left-side-wrap
+                  space-between
+                  flex-column-center">
+          <img class="login-logo"
+               src="https://scontent.fsof8-1.fna.fbcdn.net/v/t1.15752-9/152956081_234457298337723_1902429004504729005_n.png?_nc_cat=108&ccb=3&_nc_sid=ae9488&_nc_ohc=HFrlRP368jMAX9C9kxc&_nc_ht=scontent.fsof8-1.fna&oh=af1de28d58bbf5cb28c138612ae8ae63&oe=605BD1CC"/>
+          <div class="text-wrap">
+              <span class="logo-text">Destination.bg</span>
+              <span class="logo-sub-text">Добре дошли!</span>
+          </div>
+      </div>
+  </div>
+  <div class="login-right-side
+              centered">
+      <div class="login-heading-wrap
+                  centered">
+          <span class="login-heading-text">регистрация</span>
+      </div>
+      <div class="login-input-wrap
+                  flex-column-center
+                  space-around">
+          <input (keyup)="onUsernameInput($event)"
+                 value="{{ username }}"
+                 class="input"
+                 [ngStyle]="highlight == 'username' ? {borderColor: 'red'} : {backgroundColor: 'none'}"
+                 placeholder="потребителско име"
+                 type='text'/>
+          <input (keyup)="onEmailInput($event)"
+                 value="{{ email }}"
+                 class="input"
+                 [ngStyle]="highlight == 'email' ? {borderColor: 'red'} : {backgroundColor: 'none'}"
+                 placeholder="имейл"
+                 type='text'/>
+          <input (keyup)="onPasswordInput($event)"
+                 value="{{ password }}"
+                 class="input"
+                 [ngStyle]="highlight == 'password' ? {borderColor: 'red'} : {backgroundColor: 'none'}"
+                 placeholder="парола"
+                 type='password'/>
+          <input (keyup)="onConfirmPasswordInput($event)"
+                 value="{{ confirmPassword }}"
+                 class="input"
+                 [ngStyle]="highlight == 'secondary_password' ? {borderColor: 'red'} : {backgroundColor: 'none'}"
+                 placeholder="потвърди парола"
+                 type='password'/>
+      </div>
+      <div class="error">
+          <h3 *ngIf="loading && !error">loading....</h3>
+          <h3 *ngIf="!loading && error">* {{ error }}</h3>
+      </div>
+      <div class="login-button-wrap
+                  centered">
+          <button class="login-button
+                         button"
+                  type="submit"
+                  (click)="registerUser()">регистриране</button>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="card-wrap">
+    <img class="completed-icon"
+         (click)="addToCompleted()"
+         *ngIf="isInCompleted"
+         src="https://i.pinimg.com/originals/7b/dd/1b/7bdd1bc7db7fd48025d4e39a0e2f0fd8.jpg"/>
+    <img class="completed-icon"
+         (click)="addToCompleted()"
+         *ngIf="!isInCompleted"
+         src="https://image.flaticon.com/icons/png/512/71/71397.png"/>
+    <img class="checked-icon"
+         (click)="addToChecked()"
+         *ngIf="isInChecked"
+         src="https://thumbs.dreamstime.com/z/red-maps-pin-location-map-icon-location-pin-pin-icon-vector-red-maps-pin-location-map-icon-location-pin-pin-icon-vector-vector-140200096.jpg"/>
+    <img class="checked-icon"
+         (click)="addToChecked()"
+         *ngIf="!isInChecked"
+         src="https://freepikpsd.com/wp-content/uploads/2019/10/mark-icon-png-3.png"/>
+    <img class="favourites-icon"
+         (click)="addToFavourites()"
+         *ngIf="isInFavourites"
+         src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678087-heart-512.png"/>
+    <img class="favourites-icon"
+         *ngIf="!isInFavourites"
+         (click)="addToFavourites()"
+         src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Heart_empty_font_awesome.svg/1200px-Heart_empty_font_awesome.svg.png"/>
+    <img src="https://pohod.eu/wp-content/uploads/2018/01/60188049_large.jpg"
+         class="destination-card-image"/>
+    <div class="destination-label">
+      <div class="destination-name">{{ destination.name }}</div>
+      <button class="destination-button">разгледай</button>
+    </div>
+</div>

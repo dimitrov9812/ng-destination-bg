@@ -1,0 +1,134 @@
+@import '../../../main.style.scss';
+
+.login-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    margin: 0 auto;
+    height: 600px;
+    border-radius: 50px;
+    border: 2px solid $border-light-grey;
+    background-color: $opacity-white;
+}
+
+.text-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 70px;
+}
+
+.logo-text {
+    font-size: $font-m;
+    color: $dark-orange;
+}
+
+.logo-sub-text {
+    font-size: $font-xm;
+    color: $light-orange;
+}
+
+.login-logo {
+    width: 200px;
+    align-self: center;
+}
+
+.login-left-side {
+    width: 40%;
+    height: 500px;
+    flex-direction: column;
+}
+
+.login-left-side-wrap {
+    height: 400px;
+}
+
+.login-right-side {
+    width: 40%;
+    height: 500px;
+    flex-direction: column;
+}
+
+.login-input-wrap {
+    height: 250px;
+}
+
+.login-heading-wrap {
+    height: 150px;
+}
+
+.input {
+    height: 50px;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.login-button {
+    width: 40%;
+    border-radius: 20px;
+    color:$white;
+    background-color: $dark-orange;
+    border-color: $border-light-grey
+}
+
+.login-heading-text {
+    font-size: $font-lm;
+    color: $dark-orange;
+}
+.error {
+    margin-left: 16%;
+    color: $darker-orange;
+}
+
+@media(max-width: 950px) {
+  .login-card {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+
+  .login-button {
+    width: 300px;
+  }
+  .input {
+    width: 800px;
+  }
+  .logo-text ,.logo-sub-text, .login-heading-text {
+    display: none;
+  }
+  .login-logo {
+    height: 130px;
+    width: 100px;
+  }
+  .login-left-side {
+    height: 100px;
+  }
+  .login-right-side {
+    height: 400px;
+    align-items: center;
+  }
+  .login-input-wrap {
+    height: 300px;
+    width: 300px;
+  }
+  .login-heading-wrap {
+    height: 30px;
+  }
+  .login-left-side-wrap {
+    height: 150px;
+    margin-top: 50px;
+  }
+  .error {
+    width: 300px;
+  }
+}

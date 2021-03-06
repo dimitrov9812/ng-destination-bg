@@ -1,0 +1,62 @@
+@import '../../../main.style.scss';
+
+.blur {
+  position: absolute;
+  width: 80%;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(224, 168, 168, 0.561);
+   filter: blur(3px);
+   -webkit-filter: blur(8px);
+}
+.main-wrap {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  border-radius: 50px;
+  border: 2px solid $border-light-grey;
+  z-index: 2;
+
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.side-nav {
+  height: 80vh;
+  width: 20%;
+  border-radius: 50px 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:  rgba(255, 255, 255, 0.575);
+}
+
+.content {
+  border-radius: 0 50px 50px 0;
+  width: 80%;
+  background-color: rgba(255, 211, 129, 0.445);
+}
+
+@media (max-width: 1100) {
+  .side-nav {
+    width: 300px;
+  }
+}
+
+@media (max-width: 850px) {
+  .side-nav {
+    width: 50px;
+  }
+  .content {
+    width: 900px;
+  }
+}

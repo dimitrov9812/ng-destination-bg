@@ -1,1 +1,33 @@
-<p>main works!</p>
+<div class="blur"></div>
+<div class="main-wrap">
+    <div class="side-nav">
+      <nav></nav>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+</div>
+<!-- <button (click)="getDestinations()">GET DESTINATIONS</button>
+<button (click)="createDestination()">CREATE DESTINATIONS</button>
+
+<div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+    <div>
+        <div *ngFor="let destination of destinations">
+            <h3 (click)=(getDestinationByID(destination._id))> {{ destination.name }}</h3>
+            <ul></ul>
+        </div>
+    </div>
+
+    <div *ngIf="isDestinationSelected">
+        <h3>Selected Destination</h3>
+        <h6>{{ selectedDestination?.name }}</h6>
+        <ul>
+            <li>Location : {{ selectedDestination?.location }}</li>
+            <li>Best Season : {{ selectedDestination?.bestSeason }}</li>
+            <li>Average Time : {{ selectedDestination?.averageTime }}</li>
+            <li>Coordinates : {{ selectedDestination?.coordinates }}</li>
+            <li>Hardness : {{ selectedDestination?.hardness }}</li>
+            <li>Clothing : {{ selectedDestination?.clothing }}</li>
+        </ul>
+    </div>
+</div> -->

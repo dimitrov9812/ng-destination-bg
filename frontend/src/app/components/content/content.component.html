@@ -1,1 +1,15 @@
-<p>content works!</p>
+<search [destinations]="destinations"
+        (filter)="handleFilteredDestinations($event)"></search>
+
+<div *ngIf="isLoading">
+  <h3>зарежда...</h3>
+</div>
+<div *ngIf="filteredDestinations.length == 0 && !isLoading" class="destinations-wrap">
+  <h3>няма намерени резултати за "{{ searchTerm }}"</h3>
+</div>
+
+<div *ngIf="filteredDestinations" class="destinations-wrap">
+  <div *ngFor="let destination of filteredDestinations" class="destinations">
+    <destination-card [destination]="destination"></destination-card>
+  </div>
+</div>

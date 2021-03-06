@@ -1,0 +1,15 @@
+.destinations-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 62vh;
+  justify-content: space-between;
+  padding: 20px;
+  width: 98%;
+  overflow-y: scroll;
+}
+
+.destinations {
+  display: inline;
+}
+  

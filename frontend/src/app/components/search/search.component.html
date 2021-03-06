@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="logo-wrap">
+    <img class="logo"
+         src="https://scontent.fsof8-1.fna.fbcdn.net/v/t1.15752-9/152956081_234457298337723_1902429004504729005_n.png?_nc_cat=108&ccb=3&_nc_sid=ae9488&_nc_ohc=HFrlRP368jMAX9C9kxc&_nc_ht=scontent.fsof8-1.fna&oh=af1de28d58bbf5cb28c138612ae8ae63&oe=605BD1CC"/>
+    <div class="heading-wrap">
+      <div class="heading">Destination.bg</div>
+      <div class="sub-heading">открий магическите кътчета <br/>на България</div>
+    </div>
+  </div>
+  <div class="search-wrap">
+    <input class="search-input"
+           type='text'
+           [formControl]="searchField"
+           placeholder="търси дестинация"/>
+  </div>
+  <div class="buttons-wrap">
+      <span class="heading-button"
+            routerLink='/main/home'>HOME</span>
+      <span class="heading-button"
+            routerLink='/main/info'>INFO</span>
+      <span class="heading-button"
+            routerLink='/main/profile'>PROFILE</span>
+      <span class="heading-button">LOGOUT</span>
+  </div>
+
+  <div class="dropdown is-active dropdown-button" (click)="isDropdownActive=!isDropdownActive">
+    <div class="dropdown-trigger">
+     <img src="https://cdn.icon-icons.com/icons2/2024/PNG/512/lines_menu_burger_icon_123889.png"
+          class="dropdown-image"/>
+    </div>
+    <div *ngIf="isDropdownActive" class="dropdown-menu" id="dropdown-menu" role="menu">
+      <div class="dropdown-content">
+        <a  class="dropdown-item">
+          дестинации
+        </a>
+        <a class="dropdown-item">
+          профил
+        </a>
+        <a class="dropdown-item is-active">
+          информация
+        </a>
+        <hr class="dropdown-divider">
+        <a class="dropdown-item">
+          Изход
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
