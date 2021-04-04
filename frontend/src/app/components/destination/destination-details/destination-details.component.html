@@ -1,0 +1,26 @@
+<div class="default-main-wrap">
+  works
+  {{ mode }}
+
+  <div *ngIf="destination && mode == 'VIEW'">
+    <span> NAME: {{ destination.name }} </span> <br/>
+    <span> SEASON: {{ destination.bestSeason }} </span> <br/>
+    <span> CLOTHING: {{ destination.clothing }} </span> <br/>
+    <span> COORDINATES: {{ destination.coordinates }} </span> <br/>
+    <span> INFORMATION: {{ destination.information }}</span> <br/>
+    <span> HARDNESS: {{ destination.hardness }} </span> <br/>
+    <span> LOCATION: {{ destination.location }} </span> <br/>
+    <span> AVERAGE TIME: {{ destination.averageTime }} </span> <br/>
+  </div>
+
+  <div *ngIf="mode == 'ADD'">
+    <span> NAME: no name </span> <br/>
+    <span> SEASON: no name </span> <br/>
+    <span> CLOTHING: no name </span> <br/>
+    <span> COORDINATES: no name </span> <br/>
+    <span> INFORMATION: no name </span> <br/>
+    <span> HARDNESS: no name </span> <br/>
+    <span> LOCATION: no name </span> <br/>
+    <span> AVERAGE TIME: no name </span> <br/>
+  </div>
+</div>

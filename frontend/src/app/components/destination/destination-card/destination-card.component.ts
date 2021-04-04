@@ -109,6 +109,6 @@ export class DestinationCardComponent implements OnInit {
   }
 
   navigateToDestinationDetails() {
-    this.router.navigateByUrl('/main/destination/view');
+    this.router.navigateByUrl(`/main/destination/view/${this.destination._id}`);
   }
 }

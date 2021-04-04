@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IDestination } from 'src/app/models/destinations';
 import { DestinationMode } from 'src/app/models/detaination.mode';
 
 @Component({
@@ -8,6 +9,7 @@ import { DestinationMode } from 'src/app/models/detaination.mode';
 })
 export class AddDestinationComponent implements OnInit {
   public mode: DestinationMode = DestinationMode.ADD;
+  public destination: IDestination;
   constructor() { }
 
   ngOnInit(): void {

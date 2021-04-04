@@ -14,7 +14,6 @@ export class ProfileComponent implements OnInit {
   }
 
   navigateToAddDestination(): void {
-    console.log("works")
     this.router.navigateByUrl('/main/destination/add');
   }
 }
