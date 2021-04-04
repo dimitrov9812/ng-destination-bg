@@ -9,11 +9,11 @@
          src="https://image.flaticon.com/icons/png/512/71/71397.png"/>
     <img class="checked-icon"
          (click)="addToChecked()"
-         *ngIf="isInChecked"
+         *ngIf="isInToComplete"
          src="https://thumbs.dreamstime.com/z/red-maps-pin-location-map-icon-location-pin-pin-icon-vector-red-maps-pin-location-map-icon-location-pin-pin-icon-vector-vector-140200096.jpg"/>
     <img class="checked-icon"
          (click)="addToChecked()"
-         *ngIf="!isInChecked"
+         *ngIf="!isInToComplete"
          src="https://freepikpsd.com/wp-content/uploads/2019/10/mark-icon-png-3.png"/>
     <img class="favourites-icon"
          (click)="addToFavourites()"
@@ -27,6 +27,7 @@
          class="destination-card-image"/>
     <div class="destination-label">
       <div class="destination-name">{{ destination.name }}</div>
-      <button class="destination-button">разгледай</button>
+      <button class="destination-button"
+              (click)="navigateToDestinationDetails()">разгледай</button>
     </div>
 </div>

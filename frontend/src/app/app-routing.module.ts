@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddDestinationComponent } from './components/add-destination/add-destination.component';
 import { CheckedComponent } from './components/checked/checked.component';
 import { CompletedComponent } from './components/completed/completed.component';
 import { ContentComponent } from './components/content/content.component';
+import { EditDestinationComponent } from './components/edit-destination/edit-destination.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { InfoComponent } from './components/info/info.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ViewDestinationComponent } from './components/view-destination/view-destination.component';
 
 const routes: Routes = [
 { path: '', redirectTo:'/login', pathMatch:'full'},
@@ -26,7 +29,12 @@ const routes: Routes = [
     { path: 'completed', component: CompletedComponent },
     { path: 'checked', component: CheckedComponent },
     { path: 'profile', component: ProfileComponent },
-    { path: 'info', component: InfoComponent }
+    { path: 'info', component: InfoComponent },
+    { path: 'destination', children: [
+      {path: 'add', component: AddDestinationComponent },
+      {path: 'edit', component: EditDestinationComponent },
+      {path: 'view', component: ViewDestinationComponent }
+    ]}
   ]
 },
 ];

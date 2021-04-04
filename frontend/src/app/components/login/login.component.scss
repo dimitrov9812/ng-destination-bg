@@ -90,6 +90,15 @@
     color: $darker-orange;
 }
 
+.link-to-register-wrap {
+  padding-top: 0.5rem;
+}
+
+.link {
+  color: $dark-orange;
+  cursor: pointer;
+}
+
 @media(max-width: 950px) {
   .login-card {
     display: flex;
@@ -113,7 +122,7 @@
   .login-left-side {
     height: 230px;
   }
-  .login-right-side {   
+  .login-right-side {
     height: 250px;
     align-items: center;
   }
@@ -130,5 +139,8 @@
   }
   .error {
     width: 300px;
+  }
+  .link-to-register-wrap {
+    width: 200px;
   }
 }

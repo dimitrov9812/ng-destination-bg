@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IDestination } from 'src/app/models/destinations';
 import { DestinationService } from 'src/app/services/destination.service';
 import { shareReplay } from 'rxjs/operators';
+
 @Component({
   selector: 'content',
   templateUrl: './content.component.html',

@@ -17,11 +17,11 @@ export class LoginComponent implements OnInit {
   public email: string = "";
   public password: string = "";
   public loading: boolean = false;
-  private port: number = 4000;
 
   constructor(private http: HttpClient,
               private router: Router,
-              private localStorage: AuthControlService) {
+              private localStorage: AuthControlService,
+              private authService: AuthControlService) {
   }
 
   ngOnInit(): void {
@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
     // create the user
     this.loading = true;
     let user: LoginInfo = new LoginInfo(this.email, this.password)
-    this.http.post(`http://localhost:${this.port}/api/user/login`,user)
+    this.authService.login(user)
              .subscribe((res: any) => {
               if (res.error.details) {
                 this.error = errorDecorator(res.error.details[0].message);
@@ -106,7 +106,7 @@ export class LoginComponent implements OnInit {
   }
 }
 
-class LoginInfo {
+export class LoginInfo {
   constructor(private email: string,
               private password: string) {}
 }

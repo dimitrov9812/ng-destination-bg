@@ -88,4 +88,9 @@ html, body {
 .space-between {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.default-main-wrap {
+  margin: 20px;
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IDestination } from 'src/app/models/destinations';
 import { DestinationService } from 'src/app/services/destination.service';
+import { UserActionsService } from 'src/app/services/user-actions.service';
 
 @Component({
   selector: 'completed',
@@ -13,17 +14,28 @@ export class CompletedComponent implements OnInit {
   public searchTerm: string = '';
   public isLoading: boolean = false;
   public isCompletedEmpty: boolean = false;
+  public completedDestinationsIds: string[] = [];
 
-  constructor(private destinationService: DestinationService) { }
+  constructor(private destinationService: DestinationService,
+              private userActionsService: UserActionsService) { }
 
   ngOnInit(): void {
     this.isLoading = true;
-    this.filteredDestinations = this.destinationService.getCompleted();
-    this.destinations = this.destinationService.getCompleted();
-    this.isLoading = false;
-    if (this.filteredDestinations.length == 0) {
-      this.isCompletedEmpty = true;
-    }
+    this.userActionsService.listCompleted().subscribe((res: string[]) => {
+      this.completedDestinationsIds = res;
+      if (this.completedDestinationsIds.length != 0) {
+        this.completedDestinationsIds.map((id: string) => {
+          this.destinationService.getDestinationDetails(id)
+              .subscribe((result: IDestination) => {
+                  this.filteredDestinations.push(result);
+                  this.destinations.push(result);
+              });
+        });
+      } else {
+        this.isCompletedEmpty = true;
+      }
+      this.isLoading = false;
+    });
   }
 
   handleFilteredDestinations(data: any): void {

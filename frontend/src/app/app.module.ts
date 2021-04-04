@@ -23,6 +23,11 @@ import { SearchComponent } from './components/search/search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InfoComponent } from './components/info/info.component';
 import { DestinationCardComponent } from './components/destination-card/destination-card.component';
+import { AddDestinationComponent } from './components/add-destination/add-destination.component';
+import { AddDestinationNavComponent } from './components/add-destination-nav/add-destination-nav.component';
+import { DestinationDetailsComponent } from './components/destination-details/destination-details.component';
+import { EditDestinationComponent } from './components/edit-destination/edit-destination.component';
+import { ViewDestinationComponent } from './components/view-destination/view-destination.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { DestinationCardComponent } from './components/destination-card/destinat
     ProfileComponent,
     SearchComponent,
     InfoComponent,
-    DestinationCardComponent
+    DestinationCardComponent,
+    AddDestinationComponent,
+    AddDestinationNavComponent,
+    DestinationDetailsComponent,
+    EditDestinationComponent,
+    ViewDestinationComponent
   ],
   imports: [
     BrowserModule,

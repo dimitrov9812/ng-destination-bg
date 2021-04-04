@@ -90,6 +90,15 @@
     color: $darker-orange;
 }
 
+.link-to-login-wrap {
+  padding-top: 0.5rem;
+}
+
+.link {
+  color: $dark-orange;
+  cursor: pointer;
+}
+
 @media(max-width: 950px) {
   .login-card {
     display: flex;
@@ -130,5 +139,8 @@
   }
   .error {
     width: 300px;
+  }
+  .link-to-login-wrap {
+    width: 200px;
   }
 }
